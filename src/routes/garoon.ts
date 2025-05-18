@@ -5,10 +5,6 @@ import asyncHandler from "express-async-handler"
 const padZero = (num: number) => (num < 10 ? `0${num}` : num)
 
 router.get("/visitors", asyncHandler(async (req, res) => {
-  const numbers: number[] = []
-  for (let i = 1; i < 67; i++) {
-    numbers.push(i)
-  }
   const now = new Date()
   const date = req.query.date?.toString() || `${now.getFullYear()}-${padZero(now.getMonth() + 1)}-${padZero(now.getDate())}`
   const rangeStart = `${date}T00:00:00+09:00`
