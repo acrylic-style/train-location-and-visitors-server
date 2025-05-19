@@ -47,7 +47,7 @@ export type TimetableTrain = {
   /**
    * 始発駅
    */
-  originStation: Station[];
+  originStation?: Station[];
   /**
    * 終着駅
    */
@@ -98,8 +98,8 @@ export const convertTimetableTrain = (data: any) => {
     trainTypeName: staticData.trainType[stripBeforeColon(data["odpt:railway"])][stripBeforeColon(data["odpt:trainType"])],
     viaRailway: data["odpt:viaRailway"]?.map(stripBeforeColon)?.map((id: string) => ({id, name: staticData.railway[id]})),
     trainNumber: data["odpt:trainNumber"],
-    originStation: data["odpt:originStation"].map(stripBeforeColon).map((id: string) => getCachedStationById(id)),
-    destinationStation: data["odpt:destinationStation"].map(stripBeforeColon).map((id: string) => getCachedStationById(id)),
+    originStation: data["odpt:originStation"]?.map(stripBeforeColon).map((id: string) => getCachedStationById(id)),
+    destinationStation: data["odpt:destinationStation"]?.map(stripBeforeColon).map((id: string) => getCachedStationById(id)),
     direction: stripBeforeColon(data["odpt:railDirection"]),
     timetable: data["odpt:trainTimetableObject"].map(convertTimetableEntry),
   } as TimetableTrain
@@ -125,6 +125,6 @@ export const convertTimetableEntry = (data: any) => {
 
 export const getTimetableForRailway = async (railway: string): Promise<Station[]> => {
   await getStationForRailway(railway)
-  const rawData = await loadJsonCached('TrainTimetable_' + railway, `https://api-public.odpt.org/api/v4/odpt:TrainTimetable?odpt:railway=odpt.Railway:${railway}`, 60 * 60 * 24 * 7)
+  const rawData = await loadJsonCached('TrainTimetable_' + railway, `https://api.odpt.org/api/v4/odpt:TrainTimetable?acl:consumerKey=${process.env.ODPT_KEY}&odpt:railway=odpt.Railway:${railway}`, 60 * 60 * 24 * 7)
   return rawData.map(convertTimetableTrain)
 }

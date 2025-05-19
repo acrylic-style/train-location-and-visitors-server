@@ -53,6 +53,13 @@ export const convertTrainLocation = (data: any) => {
 
 export const getTrainLocationForRailway = async (railway: string): Promise<TrainLocation[]> => {
   await getStationForRailway(railway)
-  const rawData = await loadJsonCached('TrainLocation_' + railway, `https://api-public.odpt.org/api/v4/odpt:Train?odpt:railway=odpt.Railway:${railway}`, 5)
-  return rawData.map(convertTrainLocation)
+  if (staticData.train_location_format[railway] === "GTFS-RT") {
+    //const gtfsRealtime = await getGtfsRealtimeData('GTFS-RT_' + railway, )
+    return []
+  } else if (staticData.train_location_format[railway] === "JSON") {
+    const rawData = await loadJsonCached('Train_' + railway, `https://api.odpt.org/api/v4/odpt:Train?acl:consumerKey=${process.env.ODPT_KEY}&odpt:railway=odpt.Railway:${railway}`, 5)
+    return rawData.map(convertTrainLocation)
+  } else {
+    throw new Error(`Unknown train location format: ${staticData.train_location_format[railway]}`)
+  }
 }

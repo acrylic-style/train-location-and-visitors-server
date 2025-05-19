@@ -16,6 +16,18 @@ API server for the [train-location-and-visitors](https://github.com/acrylic-styl
   - GTFS-RT
 - Fetch visitor schedule (event) data from [Garoon](https://garoon.cybozu.co.jp/) (which is an SaaS for schedule management)
 
+## Supported railways
+
+- Toei Asakusa Line (都営浅草線)
+- Toei Shinjuku Line (都営新宿線)
+- Tokyo Metro Yurakucho Line (東京メトロ有楽町線)
+- Tokyo Metro Tozai Line (東京メトロ東西線)
+- Tokyo Metro Fukutoshin Line (東京メトロ副都心線)
+- Tokyo Metro Namboku Line (東京メトロ南北線)
+- Tokyo Metro Marunouchi Line (東京メトロ丸ノ内線)
+- Tokyo Metro Hibiya Line (東京メトロ日比谷線)
+- Tokyo Metro Chiyoda Line (東京メトロ千代田線)
+
 ## Data examples
 
 ### Timetable

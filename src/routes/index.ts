@@ -31,7 +31,12 @@ router.get("/train_location", asyncHandler(async (req, res) => {
     res.status(400).send("railway is required").end()
     return
   }
-  let data = await getTrainLocationForRailway(req.query.railway.toString())
+  const railway = req.query.railway.toString()
+  if (!staticData.train_location_format[railway]) {
+    res.header("Content-Type: application/json; charset=utf-8").send([]).end()
+    return
+  }
+  let data = await getTrainLocationForRailway(railway)
   const trainNumber = req.query.train_number?.toString()
   if (trainNumber) {
     data = data.filter(train => train.trainNumber === trainNumber)

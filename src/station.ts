@@ -43,8 +43,7 @@ export type Station = PartialStation & {
    * 駅名(英語/日本語)
    */
   localized_title?: {
-    en?: string;
-    ja?: string;
+    [language: string]: string;
   };
   /**
    * 接続している路線
@@ -145,6 +144,6 @@ export const getCachedStationById = (id: string, omitExtra?: boolean): PartialSt
 }
 
 export const getStationForRailway = async (railway: string): Promise<Station[]> => {
-  const rawData = await loadJsonCached('Station_' + railway, `https://api-public.odpt.org/api/v4/odpt:Station?odpt:railway=odpt.Railway:${railway}`, 60 * 60 * 24 * 7)
+  const rawData = await loadJsonCached('Station_' + railway, `https://api.odpt.org/api/v4/odpt:Station?acl:consumerKey=${process.env.ODPT_KEY}&odpt:railway=odpt.Railway:${railway}`, 60 * 60 * 24 * 7)
   return rawData.map(convertStation).map(fillConnectingStation)
 }
