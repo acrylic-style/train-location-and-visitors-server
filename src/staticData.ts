@@ -27,6 +27,7 @@ export const staticData: {
     "Tokyu.Ikegami": "東急池上線",
     "Tokyu.Meguro": "東急目黒線",
     "Tokyu.TokyuShinYokohama": "東急新横浜線",
+    "Tokyu.Toyoko": "東急東横線",
     "TokyoMetro.Ginza": "東京メトロ銀座線",
     "TokyoMetro.Tozai": "東京メトロ東西線",
     "TokyoMetro.Hanzomon": "東京メトロ半蔵門線",
@@ -150,6 +151,10 @@ export const staticData: {
       code: "KS-10",
       name: "京成高砂",
     },
+    "Keisei.Main.KeiseiSakura": {
+      code: "KS-35",
+      name: "京成佐倉"
+    },
     "Keisei.Main.KeiseiNarita": {
       code: "KS-40",
       name: "京成成田"
@@ -181,6 +186,10 @@ export const staticData: {
     "Seibu.Ikebukuro.Kotesashi": {
       code: "SI-19",
       name: "小手指",
+    },
+    "Seibu.Ikebukuro.Hanno": {
+      code: "SI-26",
+      name: "飯能",
     },
     "Sotetsu.Main.Ebina": {
       code: "SO-18",
@@ -222,6 +231,10 @@ export const staticData: {
       code: "TR-09",
       name: "東葉勝田台",
     },
+    "Tokyu.Meguro.MusashiKosugi": {
+      code: "MG-11",
+      name: "武蔵小杉",
+    },
     "Tokyu.Meguro.Hiyoshi": {
       code: "MG-13",
       name: "日吉",
@@ -229,6 +242,10 @@ export const staticData: {
     "Tokyu.TokyuShinYokohama.ShinYokohama": {
       code: "SH-01",
       name: "新横浜",
+    },
+    "Tokyu.Toyoko.MusashiKosugi": {
+      code: "TY-11",
+      name: "武蔵小杉",
     },
     "TokyoMetro.MarunouchiBranch.Honancho": {
       code: "m03",
@@ -238,9 +255,21 @@ export const staticData: {
       code: "JB-01",
       name: "三鷹",
     },
+    "JR-East.ChuoSobuLocal.Tsudanuma": {
+      code: "JB-33",
+      name: "津田沼",
+    },
+    "JR-East.JobanLocal.Kashiwa": {
+      code: "JL-28",
+      name: "柏",
+    },
     "JR-East.JobanLocal.Abiko": {
       code: "JL-30",
       name: "我孫子",
+    },
+    "JR-East.JobanLocal.Toride": {
+      code: "JL-32",
+      name: "取手",
     },
     "Minatomirai.Minatomirai.MotomachiChukagai": {
       code: "MM-06",
@@ -249,6 +278,10 @@ export const staticData: {
     "Odakyu.Odawara.SeijogakuenMae": {
       code: "OH-14",
       name: "成城学園前",
+    },
+    "Odakyu.Odawara.MukogaokaYuen": {
+      code: "OH-19",
+      name: "向ヶ丘遊園",
     },
     "Odakyu.Odawara.Isehara": {
       code: "OH-36",

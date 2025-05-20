@@ -123,7 +123,7 @@ export const convertTimetableEntry = (data: any) => {
   } as TimetableEntry
 }
 
-export const getTimetableForRailway = async (railway: string): Promise<Station[]> => {
+export const getTimetableForRailway = async (railway: string): Promise<TimetableTrain[]> => {
   await getStationForRailway(railway)
   const rawData = await loadJsonCached('TrainTimetable_' + railway, `https://api.odpt.org/api/v4/odpt:TrainTimetable?acl:consumerKey=${process.env.ODPT_KEY}&odpt:railway=odpt.Railway:${railway}`, 60 * 60 * 24 * 7)
   return rawData.map(convertTimetableTrain)
