@@ -281,6 +281,7 @@ export const staticData: {
       'TokyoMetro.Local': '各駅停車',
       'TokyoMetro.Express': '急行',
       'TokyoMetro.CommuterExpress': '通勤急行',
+      'TokyoMetro.F-Liner': "Fライナー急行",
     },
     'TokyoMetro.Hibiya': {
       'TokyoMetro.Local': '各駅停車',
