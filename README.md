@@ -27,6 +27,7 @@ API server for the [train-location-and-visitors](https://github.com/acrylic-styl
 - Tokyo Metro Marunouchi Line (東京メトロ丸ノ内線)
 - Tokyo Metro Hibiya Line (東京メトロ日比谷線)
 - Tokyo Metro Chiyoda Line (東京メトロ千代田線)
+- Tokyo Metro Hanzomon Line (東京メトロ半蔵門線)
 
 ## Data examples
 

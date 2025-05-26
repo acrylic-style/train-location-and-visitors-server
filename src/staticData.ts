@@ -55,6 +55,8 @@ export const staticData: {
     'Tobu.TobuSkytree': '東武スカイツリーライン',
     'Tobu.TobuSkytreeBranch': '東武スカイツリーライン（押上支線）',
     'Tobu.Tojo': '東武東上線',
+    'Tobu.Nikko': '東武日光線',
+    'Tobu.Isesaki': '東武伊勢崎線',
     'Toei.Asakusa': '都営浅草線',
     'Toei.Mita': '都営三田線',
     'Toei.Oedo': '都営大江戸線',
@@ -70,6 +72,7 @@ export const staticData: {
     'TokyoMetro.Tozai': '東京メトロ東西線',
     'TokyoMetro.Yurakucho': '東京メトロ有楽町線',
     'TokyoMonorail.HanedaAirport': '東京モノレール羽田空港線',
+    'Tokyu.DenEnToshi': '東急田園都市線',
     'Tokyu.Ikegami': '東急池上線',
     'Tokyu.Meguro': '東急目黒線',
     'Tokyu.TokyuShinYokohama': '東急新横浜線',
@@ -202,6 +205,14 @@ export const staticData: {
       code: 'SO-18',
       name: '海老名',
     },
+    'Tobu.Isesaki.Kuki': {
+      code: 'TI-02',
+      name: '久喜',
+    },
+    'Tobu.Nikko.MinamiKurihashi': {
+      code: 'TN-03',
+      name: '南栗橋',
+    },
     'Tobu.TobuSkytree.KitaKoshigaya': {
       code: 'TS-22',
       name: '北越谷',
@@ -230,6 +241,18 @@ export const staticData: {
       code: 'm03',
       name: '方南町',
     },
+    'Tokyu.DenEnToshi.ChuoRinkan': {
+      code: 'DT-27',
+      name: '中央林間',
+    },
+    'Tokyu.DenEnToshi.Nagatsuta': {
+      code: 'DT-22',
+      name: '長津田',
+    },
+    'Tokyu.DenEnToshi.Saginuma': {
+      code: 'DT-14',
+      name: '鷺沼',
+    },
     'Tokyu.Meguro.Hiyoshi': {
       code: 'MG-13',
       name: '日吉',
@@ -256,6 +279,7 @@ export const staticData: {
     'Toei.Shinjuku': ['S-01', 'S-02', 'S-03', 'S-04', 'S-05', 'S-06', 'S-07', 'S-08', 'S-09', 'S-10', 'S-11', 'S-12', 'S-13', 'S-14', 'S-15', 'S-16', 'S-17', 'S-18', 'S-19', 'S-20', 'S-21'],
     'TokyoMetro.Chiyoda': ['C01', 'C02', 'C03', 'C04', 'C05', 'C06', 'C07', 'C08', 'C09', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17', 'C18', 'C19', 'C20'],
     'TokyoMetro.Fukutoshin': ['F01', 'F02', 'F03', 'F04', 'F05', 'F06', 'F07', 'F08', 'F09', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16'],
+    'TokyoMetro.Hanzomon': ['Z01', 'Z02', 'Z03', 'Z04', 'Z05', 'Z06', 'Z07', 'Z08', 'Z09', 'Z10', 'Z11', 'Z12', 'Z13', 'Z14'],
     'TokyoMetro.Hibiya': ['H01', 'H02', 'H03', 'H04', 'H05', 'H06', 'H07', 'H08', 'H09', 'H10', 'H11', 'H12', 'H13', 'H14', 'H15', 'H16', 'H17', 'H18', 'H19', 'H20', 'H21', 'H22'],
     'TokyoMetro.Marunouchi': ['M01', 'M02', 'M03', 'M04', 'M05', 'M06', 'M07', 'M08', 'M09', 'M10', 'M11', 'M12', 'M13', 'M14', 'M15', 'M16', 'M17', 'M18', 'M19', 'M20', 'M21', 'M22', 'M23', 'M24', 'M25'],
     'TokyoMetro.Namboku': ['N01', 'N02', 'N03', 'N04', 'N05', 'N06', 'N07', 'N08', 'N09', 'N10', 'N11', 'N12', 'N13', 'N14', 'N15', 'N16', 'N17', 'N18', 'N19'],
@@ -287,6 +311,11 @@ export const staticData: {
       'TokyoMetro.CommuterExpress': '通勤急行',
       'TokyoMetro.F-Liner': "Fライナー急行",
     },
+    'TokyoMetro.Hanzomon': {
+      'TokyoMetro.Local': '各駅停車',
+      'TokyoMetro.SemiExpress': '準急',
+      'TokyoMetro.Express': '急行',
+    },
     'TokyoMetro.Hibiya': {
       'TokyoMetro.Local': '各駅停車',
     },
@@ -313,6 +342,7 @@ export const staticData: {
     'Toei.Shinjuku': 'JSON',
     'TokyoMetro.Chiyoda': 'GTFS-RT',
     'TokyoMetro.Fukutoshin': 'GTFS-RT',
+    'TokyoMetro.Hanzomon': 'GTFS-RT',
     'TokyoMetro.Hibiya': 'GTFS-RT',
     'TokyoMetro.Marunouchi': 'GTFS-RT',
     'TokyoMetro.Namboku': 'GTFS-RT',
