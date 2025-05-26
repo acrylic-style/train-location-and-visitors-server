@@ -5,6 +5,7 @@ export const staticData: {
   station: {[key: string]: {code?: string, name: string}},
   station_order: {[key: string]: string[]},
   train_location_format: {[railway: string]: "JSON" | "GTFS-RT"},
+  train_alert_format: {[railway: string]: "JSON" | "GTFS-RT"},
 } = {
   operator: {
     'Hokuso': '北総鉄道',
@@ -348,5 +349,17 @@ export const staticData: {
     'TokyoMetro.Namboku': 'GTFS-RT',
     'TokyoMetro.Tozai': 'GTFS-RT',
     'TokyoMetro.Yurakucho': 'GTFS-RT',
+  },
+  train_alert_format: {
+    'Toei.Asakusa': 'JSON',
+    'Toei.Shinjuku': 'JSON',
+    'TokyoMetro.Chiyoda': 'JSON',
+    'TokyoMetro.Fukutoshin': 'JSON',
+    'TokyoMetro.Hanzomon': 'JSON',
+    'TokyoMetro.Hibiya': 'JSON',
+    'TokyoMetro.Marunouchi': 'JSON',
+    'TokyoMetro.Namboku': 'JSON',
+    'TokyoMetro.Tozai': 'JSON',
+    'TokyoMetro.Yurakucho': 'JSON',
   },
 }

@@ -5,6 +5,7 @@ import {getTimetableForRailway} from '../timetable'
 import {getStationForRailway} from '../station'
 import {staticData} from '../staticData'
 import {getTrainLocationForRailway} from '../train_location'
+import {getTrainInformationForRailway} from "../train_information";
 
 router.get("/data", (_req, res) => {
   res.header("Content-Type: application/json; charset=utf-8").send(staticData).end()
@@ -42,6 +43,14 @@ router.get("/train_location", asyncHandler(async (req, res) => {
     data = data.filter(train => train.trainNumber === trainNumber)
   }
   res.header("Content-Type: application/json; charset=utf-8").send(data).end()
+}))
+
+router.get("/train_information", asyncHandler(async (req, res) => {
+  if (!req.query.railway?.toString()) {
+    res.status(400).send("railway is required").end()
+    return
+  }
+  res.header("Content-Type: application/json; charset=utf-8").send(await getTrainInformationForRailway(req.query.railway.toString())).end()
 }))
 
 export default router
