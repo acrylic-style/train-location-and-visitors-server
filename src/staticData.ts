@@ -186,6 +186,10 @@ export const staticData: {
       code: 'SI-10',
       name: '石神井公園',
     },
+    'Seibu.Ikebukuro.Tokorozawa': {
+      code: 'SI-17',
+      name: '所沢',
+    },
     'Shibayama.Shibayama.ShibayamaChiyoda': {
       code: 'SR-01',
       name: '芝山千代田'
